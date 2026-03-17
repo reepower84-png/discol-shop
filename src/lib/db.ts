@@ -1,12 +1,13 @@
 import Database from 'better-sqlite3';
 import path from 'path';
-
-const dbPath = path.join(process.cwd(), 'data', 'discol.db');
-
-// 데이터베이스 폴더 생성
 import fs from 'fs';
-const dataDir = path.join(process.cwd(), 'data');
-if (!fs.existsSync(dataDir)) {
+
+// Vercel 서버리스 환경에서는 /tmp만 쓰기 가능
+const isVercel = process.env.VERCEL === '1';
+const dataDir = isVercel ? '/tmp' : path.join(process.cwd(), 'data');
+const dbPath = path.join(dataDir, 'discol.db');
+
+if (!isVercel && !fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
 
