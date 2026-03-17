@@ -20,6 +20,7 @@ async function sendDiscordNotification(inquiry: {
     'adult': '성인용 거품치약',
     'child': '어린이용 거품치약',
     'baby': '영유아용 치약',
+    'pet': '반려동물용 치약',
   };
 
   const embed = {

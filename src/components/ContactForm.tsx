@@ -130,20 +130,7 @@ export default function ContactForm() {
                 <option value="adult">성인용 거품치약</option>
                 <option value="child">어린이용 거품치약</option>
                 <option value="baby">영유아용 치약</option>
-              </select>
-            </div>
-
-            {/* 결제 방법 */}
-            <div style={{ marginBottom: '24px' }}>
-              <label htmlFor="payment_method" style={{ display: 'block', fontSize: '14px', fontWeight: 600, color: '#374151', marginBottom: '8px' }}>
-                결제 방법
-              </label>
-              <select id="payment_method" name="payment_method" value={formData.payment_method} onChange={handleChange} className="form-input" style={{ ...inputStyle, paddingRight: '40px' }}>
-                <option value="">선택해주세요</option>
-                <option value="계좌이체">계좌이체</option>
-                <option value="카드결제">카드결제</option>
-                <option value="무통장입금">무통장입금</option>
-                <option value="상담 후 결정">상담 후 결정</option>
+                <option value="pet">반려동물용 치약</option>
               </select>
             </div>
 
