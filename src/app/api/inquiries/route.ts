@@ -43,11 +43,6 @@ async function sendDiscordNotification(inquiry: {
         inline: true,
       },
       {
-        name: '💳 결제 방법',
-        value: inquiry.payment_method || '미선택',
-        inline: true,
-      },
-      {
         name: '💬 문의 내용',
         value: inquiry.message || '없음',
         inline: false,
